@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+}
+
+body{
+    background-color: black;
+    font-family: "Trebuchet MS","Lucide sans Unicode","Lucide Grande","Lucide Sans",Arial,sans-serif;
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.circle1{
+    position: fixed;
+    top: 5%;
+    left: 30%;
+    width: 13em;
+    height: 13em;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #d84869;
+    background: linear-gradient(-25deg,#d84869,#f46641);
+    animation: circleAnimate 15s infinite;
+    
+}
+
+@keyframes circleAnimate{
+    50%{
+        left: 33%;
+        top: 4%;
+        scale: 1.11;
+    }
+}
+
+.circle2{
+    position: absolute;
+    bottom: 5%;
+    right: 30%;
+    width: 19em;
+    height: 19em;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #5648d8;
+    background: linear-gradient(-25deg,#5648d8, #8641f4);
+    animation: circleAnimate 15s infinite;
+    
+}
+
+@keyframes circleAnimate{
+    50%{
+        right: 33%;
+        bottom: 4%;
+        scale: 1.11;
+    }
+}
+
+.wrapper2{ 
+    border:2px solid #ffffff30;
+    height: 450px;
+    width: 300px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background: #ffffff1a;
+   backdrop-filter: blur(15px);
+   border-radius: 15px;
+   color: #ffffff;
+   padding: 20px 50px;
+   gap: 40px;
+   
+    
+}
+.user-img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+ 
+}
+
+h2{
+  font-size: 30px;  
+}
+
+.bottom-group{
+    display: flex;
+    gap: 30px;
+    
+}
+.btn-share{
+    display: flex;
+    padding: 10px 10px;
+    border:2px solid whitesmoke;
+    background: #ffffff1a;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+#follow{
+    padding: 10px 35px; 
+    border-radius: 10px;
+    border:2px solid whitesmoke;
+    background: #ffffff1a;
+    color: #ffffff;
+    
+}
+
+.btn-share:hover{
+    background: #ffffff59;
+    color: #131313;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+#follow:hover{
+    background: white;
+    color: #131313;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    border: 2px solid #ffffff59;
+    width: 500px;
+    scale: 0;
+    background: #00000088;
+    backdrop-filter: blur(10px);
+    color: white;
+    z-index: 1;
+    padding: 20px 25px;
+    border-radius: 20px;
+    transition: 0.5s ease-in-out;
+}
+
+.modal-header{
+    display: flex;
+    margin-bottom: 25px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom:12px ;
+    border-bottom: 1px solid #ffffff88;
+}
+.icon-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    
+}
+
+.icon{
+    padding: 17px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+    gap: 10px;
+    justify-content: center;
+    transition: all 0.5s;
+    margin-bottom: 25px;
+    text-decoration: none;
+}
+.icon i{
+    font-size: 27px;
+}
+#facebook {
+    color: #1771e6;
+    border: 1px solid #1771e6;
+}
+#twitter {
+    color: #1c99e6;
+    border: 1px solid #1c99e6;
+}
+
+#instagram {
+    color: #cb2770;
+    border: 1px solid #cb2770;
+}
+
+#whatsapp {
+    color: #2fe664;
+    border: 1px solid #2fe664;
+}
+#telegram {
+    color: #0081c2;
+    border: 1px solid #0081c2;
+}
+
+#facebook:hover{
+    color: white;
+    background: #1771e6;
+}
+#twitter:hover{
+    color:white;
+    background: #1c99e6;
+}
+#instagram:hover{
+    color:white;
+    background: #cb2770;
+}
+#whatsapp:hover{
+    color:white;
+    background: #2fe664;
+}
+#telegram:hover{
+    color:white;
+    background: #0081c2;
+}
+
+.active{
+    scale: 1;
+}
+
+.overlay{
+    position: fixed;
+    background-color: #5f5f5f83;
+    top: 0;
+    opacity: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    transition: 0.5s ease-in-out;
+}
+
+.overlayactive{
+    opacity: 1;
+    pointer-events: initial;
+}
+#close:hover{
+    cursor: pointer;
+    font-size: 30px;
+}
